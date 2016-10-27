@@ -3,31 +3,23 @@ package com.buryanova.homeworks.square;
 /**
  * Created by Ann on 10/26/16.
  */
-public class Square {
+public class Square extends Shape {
 
-    public static void main(String[] args) {
+    int side;
 
-        Square form = new Square();
-        System.out.println("result for circle:" + form.circle(3,2));
-        System.out.println("result for square is:" + form.square(6));
-        System.out.println("result for rectangle is:" + form.rectangle(2, 2));
+    public Square(int s) {
+        side = s;
+    }
+
+    public double length() {
+        return 4 * side;
+    }
+
+    public double area() {
+        return side * side;
     }
 
 
-    private static int circle(int radius,int circumference) {
-        int result = radius * circumference;
-        return result;
-    }
-
-    private static int square(int side) {
-        int result = side * side;
-        return result;
-    }
-
-    private static int rectangle(int side1, int side2) {
-        int result = side1 * side2;
-        return result;
-    }
 
 
 }
